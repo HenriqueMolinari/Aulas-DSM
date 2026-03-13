@@ -10,17 +10,34 @@ class SplashPage extends StatelessWidget {
         padding: EdgeInsets.all(100),
         color: const Color.fromARGB(255, 255, 255, 255),
         child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          //mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text("---"),
-            Text("---"),
-            Text("---"),
+            Row(
+              children: [
+                Container(
+                  width: 150,
+                  height: 150,
+                  alignment: Alignment.center,
+                  decoration: BoxDecoration(
+                    color: Colors.black,
+                    borderRadius: BorderRadius.circular(14),
+                  ),
+                  child: Text(
+                    'IA',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 100,
+                      fontWeight: FontWeight.w800,
+                      decoration: TextDecoration.none,
+                    ),
+                  ),
+                ),
+              ],
+            ),
           ],
         ),
-        
       ),
     );
   }
 }
-

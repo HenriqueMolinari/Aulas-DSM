@@ -21,8 +21,15 @@ linter:
   # `// ignore_for_file: name_of_lint` syntax on the line or in the file
   # producing the lint.
   rules:
+    # Força o uso de vírgulas finais em parâmetros e argumentos
+    - require_trailing_commas
+    # Opcional: Garante consistência em construtores
+    - prefer_int_literals
+    # Recomendo manter as aspas simples como padrão do Dart
+    - prefer_single_quotes
+    
     # avoid_print: false  # Uncomment to disable the `avoid_print` rule
     # prefer_single_quotes: true  # Uncomment to enable the `prefer_single_quotes` rule
-
+  
 # Additional information about this file can be found at
 # https://dart.dev/guides/language/analysis-options
