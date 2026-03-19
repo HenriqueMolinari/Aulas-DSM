@@ -5,7 +5,7 @@ void main(){
 
     runApp(MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: "Projeto 01 - Splash",
+      title: 'Projeto 01 - Splash',
       theme: ThemeData(useMaterial3: true),
       home: SplashPage(),
     ));

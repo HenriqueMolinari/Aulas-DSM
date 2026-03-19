@@ -1,3 +1,5 @@
+import 'dart:ffi';
+
 import 'package:flutter/material.dart';
 
 class SplashPage extends StatelessWidget {
@@ -65,7 +67,7 @@ class SplashPage extends StatelessWidget {
               decoration: BoxDecoration(
                 color: Colors.white,
                 borderRadius: BorderRadius.circular(18),
-                border: Border.all(color: Color(0x1100000)),
+                border: Border.all(color: Color(0x01100000)),
                 boxShadow: [
                   BoxShadow(
                     color: Colors.black87,
@@ -74,6 +76,88 @@ class SplashPage extends StatelessWidget {
                   ),
                 ],
               ),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    'Bem Vindo(a)',
+                    style: TextStyle(fontSize: 18, fontWeight: FontWeight.w800),
+                  ),
+                  SizedBox(height: 8),
+                  Text(
+                    'Aqui você vai usar Container, Column, Row',
+                    style: TextStyle(
+                      fontSize: 14,
+                      height: 1.3,
+                      color: Colors.black54,
+                      fontWeight: FontWeight.w800,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            SizedBox(height: 18),
+            Row(
+              children: [
+                Container(
+                  width: 10,
+                  height: 10,
+                  decoration: BoxDecoration(
+                    color: Colors.green,
+                    borderRadius: BorderRadius.circular(95),
+                  ),
+                ),
+                SizedBox(width: 8),
+                Text(
+                  'UI pronta para finalizar',
+                  style: TextStyle(
+                    fontSize: 13,
+                    color: Colors.black54,
+                    fontWeight: FontWeight.w600,
+                  ),
+                ),
+              ],
+            ),
+            Spacer(flex: 1),
+            Column(
+              children: [
+                Container(
+                  width: 42,
+                  height: 42,
+                  alignment: Alignment.center,
+                  decoration: BoxDecoration(
+                    color: Colors.black,
+                    borderRadius: BorderRadius.circular(999),
+                  ),
+                  child: SizedBox(
+                    width: 18,
+                    height: 18,
+                    child: CircularProgressIndicator(
+                      strokeWidth: 2.2,
+                      color: Colors.white,
+                      backgroundColor: Colors.deepOrange,
+                    ),
+                  ),
+                ),
+                SizedBox(height: 12),
+                Text(
+                  'Carregando. . .',
+                  style: TextStyle(
+                    fontSize: 16,
+                    color: Colors.black54,
+                    fontWeight: FontWeight.w600,
+                  ),
+                ),
+                SizedBox(height: 16),
+                Text(
+                  "v1.0.0",
+                  style: TextStyle(
+                    fontSize: 12,
+                    color: Colors.black38,
+                    fontWeight: FontWeight.w600,
+                  ),
+                ),
+              ],
             ),
           ],
         ),
