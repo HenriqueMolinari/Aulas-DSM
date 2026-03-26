@@ -13,7 +13,7 @@ class AppWidget extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Login-Cadastro MVVM',
-      initialRoute: AppRoutes.login,
+      initialRoute: AppRoutes.login, // rota inical, classe especifica para roteamento
       routes: AppPages.routes,
     );
   }

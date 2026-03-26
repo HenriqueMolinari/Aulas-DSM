@@ -6,7 +6,7 @@ import 'package:projeto02/features/auth/view/register_page.dart';
 
 abstract class AppPages {
 
-  static Map<String, WidgetBuilder> get routes => {
+  static Map<String, WidgetBuilder> get routes => { // um mapa
     AppRoutes.login : (_) => const LoginPage(), // quando o aplicativo chamar "AppRoutes.login" ele vai retornar a LoginPage
     AppRoutes.register :  (_) => const RegisterPage(),
   };
