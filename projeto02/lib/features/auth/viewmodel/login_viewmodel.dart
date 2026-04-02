@@ -3,6 +3,7 @@ import 'package:validatorless/validatorless.dart';
 
 class LoginViewmodel extends ChangeNotifier {
   final formKey = GlobalKey<FormState>();
+
   final emailController = TextEditingController();
   final passwordController = TextEditingController();
 
@@ -11,19 +12,19 @@ class LoginViewmodel extends ChangeNotifier {
 
   String? emailValidator(String? value) {
     return Validatorless.multiple([
-      Validatorless.required("E-mail é obrigatório"),
-      Validatorless.email('Digite um E-mail válido')
+      Validatorless.required('Email é obrigatório'),
+      Validatorless.email('Digite um email válido'),
     ])(value);
   }
 
   String? passwordValidator(String? value) {
     return Validatorless.multiple([
-      Validatorless.required("E-mail é obrigatório"),
-      Validatorless.min(6, "A senha deve ter pelo menos 6 caracteres")
+      Validatorless.required('Email é obrigatório'),
+      Validatorless.min(6, 'A senha deve ter pelo menos 6 caracteres'),
     ])(value);
   }
 
-  void togglePasswordVisibility(){
+  void togglePasswordVisibility() {
     obscurePassword = !obscurePassword;
     notifyListeners();
   }

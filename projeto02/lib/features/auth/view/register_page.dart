@@ -11,7 +11,11 @@ class _RegisterPageState extends State<RegisterPage> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-      child: Scaffold(appBar: AppBar(title: Text("CADASTRO"))),
+      child: Scaffold(
+        appBar: AppBar(
+          title: Text("CADASTRO"),
+        ),
+      ),
     );
   }
 }

@@ -10,13 +10,13 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<LoginPage> {
-  /*
-  String _texto = "DDM";
+  //String _texto = "DDM";
 
-  void clicar() {
-    _texto = "DDM - Aula 1.5x";
-  }
-  */
+  /*void clicar() {
+    setState(() {
+      _texto = "DDM - Aula 1.5x";
+    }); 
+  }*/
 
   late final LoginViewmodel viewModel;
 
@@ -36,9 +36,12 @@ class _LoginPageState extends State<LoginPage> {
   Widget build(BuildContext context) {
     return AnimatedBuilder(
       animation: viewModel,
-      builder: (_, _) {
+      builder: (_, __) {
         return Scaffold(
-          appBar: AppBar(title: Text("Login"), centerTitle: true),
+          appBar: AppBar(
+            title: Text("Login"),
+            centerTitle: true,
+          ),
           body: SafeArea(
             child: SingleChildScrollView(
               padding: EdgeInsets.all(16),
@@ -47,23 +50,37 @@ class _LoginPageState extends State<LoginPage> {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: [
-                    SizedBox(height: 30),
-                    Icon(Icons.lock_outline, size: 80),
-                    const SizedBox(height: 20),
+                    const SizedBox(
+                      height: 30,
+                    ),
+                    Icon(
+                      Icons.lock_outline,
+                      size: 80,
+                    ),
+                    const SizedBox(
+                      height: 20,
+                    ),
                     const Text(
-                      "Bem Vindo",
+                      "Bem-vindo",
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        fontSize: 28,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    const SizedBox(
+                      height: 8,
+                    ),
+                    const Text(
+                      "Faça login para continuar",
                       textAlign: TextAlign.center,
                       style: TextStyle(
                         fontSize: 16,
                         color: Colors.black54,
-                        fontWeight: FontWeight.w600,
                       ),
                     ),
-                    const SizedBox(height: 8),
-                    const Text(
-                      "Faça login para continuar",
-                      textAlign: TextAlign.center,
-                      style: TextStyle(fontSize: 8, color: Colors.black54),
+                    const SizedBox(
+                      height: 32,
                     ),
                     TextFormField(
                       controller: viewModel.emailController,
@@ -75,7 +92,9 @@ class _LoginPageState extends State<LoginPage> {
                         prefixIcon: Icon(Icons.email_outlined),
                       ),
                     ),
-                    const SizedBox(height: 16),
+                    const SizedBox(
+                      height: 16,
+                    ),
                     TextFormField(
                       controller: viewModel.passwordController,
                       obscureText: viewModel.obscurePassword,
@@ -88,13 +107,15 @@ class _LoginPageState extends State<LoginPage> {
                           onPressed: viewModel.togglePasswordVisibility,
                           icon: Icon(
                             viewModel.obscurePassword
-                                ? Icons.visibility_off
-                                : Icons.visibility,
+                                ? Icons.visibility
+                                : Icons.visibility_off,
                           ),
                         ),
                       ),
                     ),
-                    const SizedBox(height: 24),
+                    const SizedBox(
+                      height: 24,
+                    ),
                     SizedBox(
                       height: 50,
                       child: ElevatedButton(
@@ -110,7 +131,9 @@ class _LoginPageState extends State<LoginPage> {
                             : const Text("Entrar"),
                       ),
                     ),
-                    const SizedBox(height: 16),
+                    const SizedBox(
+                      height: 16,
+                    ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [

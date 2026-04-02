@@ -1,14 +1,12 @@
-
-import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 import 'package:projeto02/app/routes/app_routes.dart';
-import 'package:projeto02/features/auth/view/login_page.dart';
-import 'package:projeto02/features/auth/view/register_page.dart';
+
+import '../../features/auth/view/login_page.dart';
+import '../../features/auth/view/register_page.dart';
 
 abstract class AppPages {
-
-  static Map<String, WidgetBuilder> get routes => { // um mapa
-    AppRoutes.login : (_) => const LoginPage(), // quando o aplicativo chamar "AppRoutes.login" ele vai retornar a LoginPage
-    AppRoutes.register :  (_) => const RegisterPage(),
+  static Map<String, WidgetBuilder> get routes => {
+    AppRoutes.login: (_) => const LoginPage(),
+    AppRoutes.register: (_) => const RegisterPage(),
   };
-
 }
